@@ -7,6 +7,7 @@ excerpt: "A demo of Markdown and HTML includes"
 aside: true
 ---
 
+hi!
 # Heading 1
 
 ## Heading 2

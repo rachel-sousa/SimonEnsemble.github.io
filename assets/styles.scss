@@ -23,7 +23,7 @@ body {
 
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1500px; //1200 default
   margin: 0 auto;
 }
 
@@ -52,12 +52,14 @@ body {
   padding-bottom: .4rem;
   margin-bottom: 1.6rem;
   text-align: center;
+  color: white;
+  text-color: white;
   background: $featureBackgroundColour;
   background-size: cover;
   background-position: center;
   .container {
-    min-height: 35vh;
-    max-width: 60%;
+    min-height: 90vh;
+    max-width: 75%;
     @include flex-direction(column);
     @include justify-content(center);
   }
