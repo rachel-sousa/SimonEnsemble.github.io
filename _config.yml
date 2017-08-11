@@ -1,4 +1,5 @@
 # Site configuration
+# https://github.com/daviddarnes/alembic
 # 1. Files excluded from Jekyll builds
 # 2. Installed Gems
 # 3. Gem settings
@@ -36,16 +37,13 @@ paginate: 2 # jekyll-paginate > items per page
 paginate_path: blog/page:num # jekyll-paginate > blog page
 jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
 twitter:
-  username: DavidDarnes # jekyll-seo-tag > Owners twitter username
-author: DavidDarnes # jekyll-seo-tag > default author
+  username: CoryMSimon # jekyll-seo-tag > Owners twitter username
+author: CorySimon # jekyll-seo-tag > default author
 social: # jekyll-seo-tag > social overrides
-  name: David Darnes # jekyll-seo-tag > real name
+  name: CorySimon # jekyll-seo-tag > real name
   links:  # jekyll-seo-tag > social aliases (sameAs)
-    - https://twitter.com/DavidDarnes
-    - https://www.facebook.com/daviddarnes
-    - https://www.linkedin.com/in/daviddarnes
-    - https://plus.google.com/+DavidDarnes
-    - https://github.com/daviddarnes
+    - https://twitter.com/CoryMSimon
+    - https://github.com/CorySimon
 
 # 4. Jekyll settings
 sass:
@@ -59,10 +57,9 @@ collections:
   posts:
     title: Posts # Needed for Siteleaf
     output: true
-    description: "My thoughts and ideas" # The post list page content
-    feature_text: |
-      Welcome to the blog
-    feature_image: "https://unsplash.it/1300/400?image=1067"
+    description: "Musings on science, math, engineering, and the environment." # The post list page content
+    feature_text: ""
+    feature_image: "../images/OregonCoast.JPG"
 
 # 6. Jekyll collections settings
 defaults:
@@ -72,46 +69,53 @@ defaults:
       type: pages
     values:
       layout: page # Default layout
-      image: "/assets/default-social-image.png" # Default image for sharing
+      image: "../images/OregonCoast.JPG" # Default image for sharing
   -
     scope:
       path: ""
       type: posts
     values:
       layout: post # Default layout
-      image: "/assets/default-social-image.png" # Default image for sharing
+      image: "../images/OregonCoast.JPG" # Default image for sharing
 
 # 7. Site settings
 encoding: utf-8 # Make sure the encoding is right
-title: "Alembic" # Site name or title, also used in jekyll-seo-tag
-logo: "/assets/logo.svg" # Site logo, also used in jekyll-seo-tag
-description: "Alembic is a starting point for Jekyll projects. Rather than starting from scratch, this boilerplate is designed to get the ball rolling immediately" # Site description and default description, also used in jekyll-seo-tag
-url: "https://alembic.darn.es" # Site url, also used in jekyll-seo-tag
+title: "The Simon Ensemble" # Site name or title, also used in jekyll-seo-tag
+logo: "/assets/logo.png" # Site logo, also used in jekyll-seo-tag
+description: "The Simon Ensemble at Oregon State University" # Site description and default description, also used in jekyll-seo-tag
+ # url: "local" # Site url, also used in jekyll-seo-tag
+url: http://localhost:4000
 baseurl: ""
-repo: "https://github.com/daviddarnes/alembic"
-email: "me@daviddarnes.com"
+ # repo: "https://github.com/CorySimon/alembic"
+email: "CoryMSimon@gmail.com"
 # disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
-avatarurl: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c" # Uses avatars for favicons to get multple sites, eg Gravatar, Twitter, GitHub
+# see gravitar.com `echo -n myemail@oregonstate.edu | md5sum` (lowercase)
+avatarurl: "https://www.gravatar.com/avatar/de74dcd32c1abfb40e07e895346f416d" # Uses avatars for favicons to get multple sites, eg Gravatar, Twitter, GitHub <- hashed email
 
 # 8. Site navigation
 navigation_header:
-  Home: /
-  Elements: /elements/
+  Research: /
+  Publications: /publications/
+  Teaching: /teaching/
+  People: /people/
   Blog: /blog/
-  Categories: /categories/
-  Search: /search/
-  Fork Alembic: https://github.com/daviddarnes/alembic
+  Join Us: /join/
 
 navigation_footer:
-  Created by David Darnes: https://darn.es
+  Research: /
+  Publications: /publications/
+  Teaching: /teaching/
+  People: /people/
+  Blog: /blog/
+  Join Us: /join/
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
-  Twitter: https://twitter.com/DavidDarnes
-  LinkedIn: https://www.linkedin.com/in/daviddarnes
-  Google+: https://plus.google.com/+DavidDarnes
-  GitHub: https://github.com/daviddarnes
-  link: https://darn.es
-  RSS: /feed.xml
+  Twitter: https://twitter.com/CoryMSimon
+ #   LinkedIn: https://www.linkedin.com/in/daviddarnes
+ #   Google+: https://plus.google.com/+DavidDarnes
+  GitHub: https://github.com/CorySimon
+ #   link: https://darn.es
+ #   RSS: /feed.xml
 
 sharing_links: # Appear at the bottom of single blog posts, uncomment and comment out as desired. Colours set the button colour
   Twitter: "#1DA1F2"

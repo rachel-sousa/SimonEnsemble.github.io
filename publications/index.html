@@ -1,0 +1,92 @@
+---
+title: Publications
+---
+
+<style>
+body {
+	font-size: 16pt;
+}
+h4 {
+        color: #00FF00;
+        font-size: 18pt;
+}
+ppp {
+    font-size: 75%;
+    min-height: 10px;
+    line-height: 75%;
+    color: #808080;
+}
+body {
+    font-size: 100%;
+    line-height: 110%;
+    color: #808080;
+}
+nbr {
+    color: orange;
+}
+quotations{
+    color: green;
+}
+#left {
+  width: 150px;
+  float: left;
+  padding-right: 30px;
+}
+#right {
+  margin-left: 150px;
+  /* Change this to whatever the width of your left column is*/
+}
+.clear {
+  clear: both;
+}
+</style>
+
+{% include button.html text="Google Scholar profile" icon="" link="https://scholar.google.com/citations?user=eoR8MNMAAAAJ&hl=en" %}
+
+<center>
+    <img style="width:200px;" src="images/cover_1.png" alt="">
+    <img style="width:200px;" src="images/cover_2.png" alt="">
+    <img style="width:200px;" src="images/cover_3.png" alt="">
+    <img style="width:200px;" src="images/cover_4.png" alt="">
+</center>
+
+<br>
+<hr>
+
+{% for work in site.data.publications %}
+  <div id="container">
+    <div id="left">
+        <center> 
+            <img style="width:200px;" src="{{ work.image }}"></a>
+        </center>
+    </div>
+    <div id="right">
+        <h7><nbr>{{ forloop.index }}</nbr>.
+        <quotations>❝</quotations>{{ work.title }}<quotations>❞</quotations></h7><br>
+        {{ work.authors }}.<br>
+        <i>{{ work.journal }}</i>. ({{ work.date }}) <a href="{{ work.url }}" target="_blank">DOI</a><br>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <hr>
+{% endfor %}
+
+<h3>Publications for Outreach</h3>
+
+{% for work in site.data.outreach_publications %}
+  <div id="container">
+    <div id="left">
+        <center> 
+            <img style="width:200px;" src="{{ work.image }}"></a>
+        </center>
+    </div>
+    <div id="right">
+        <h7><nbr>{{ forloop.index }}</nbr>.
+        <quotations>❝</quotations>{{ work.title }}<quotations>❞</quotations></h7><br>
+        {{ work.authors }}.<br>
+        <i>{{ work.journal }}</i>. ({{ work.date }}) <a href="{{ work.url }}" target="_blank">DOI</a><br>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <hr>
+{% endfor %}
