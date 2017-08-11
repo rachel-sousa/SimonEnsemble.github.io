@@ -15,7 +15,8 @@ $white: #ffffff;
 
 // Typography
 $bodytype: (
-  font-family: 'Georgia, serif',
+//  font-family: 'Georgia, serif',
+  font-family: 'Roboto, sans-serif',
   regular: 400,
   bold: 700,
   italic: italic,
@@ -23,7 +24,9 @@ $bodytype: (
 );
 
 $headingtype: (
-  font-family: '"Merriweather", serif',
+//  font-family: '"Merriweather", serif',
+// font-family: 'Roboto, sans-serif',
+  font-family: 'proxima-nova, sans-serif',
   regular: 400,
   bold: 700,
   cap-height: 0.75

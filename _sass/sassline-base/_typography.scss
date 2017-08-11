@@ -65,6 +65,13 @@ a {
     font-style: normal;
     font-weight: map-get($headingtype, bold);
   }
+  h7 {
+    color: $headingColour;
+    font-family: unquote(map-get($headingtype, font-family));
+    font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
+    font-style: normal;
+    font-weight: normal;
+  }
 
   // Heading level 1.
   h1, .alpha {
