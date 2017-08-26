@@ -29,10 +29,6 @@ We work *together* towards a common mission.
 
 I am invested in my students' learning and success; my success as an assistant professor is predicated on my students'.
 
-> Train people well enough so they can leave;
-> treat them well enough so they don't want to.    
-> :microphone: Richard Branson
-
 I hope each student works on a project that he/she finds fascinating and impactful. Motivation to work diligently on a research project should stem from curiosity and the desire to make a positive impact. Our work has the potential to improve human lives, conserve resources, and preserve the planet. In addition, research progress is incredibly rewarding.
 
 > Suddenly knowing what's going on, with total certainty, *all the way to the bottom*-- is a special thing, attainable in few if any other places in life. You feel you're reached into the universe's guts and put your hand on the wire. It's hard to describe to people who haven't experienced it. :microphone: Jordan Ellenberg 
