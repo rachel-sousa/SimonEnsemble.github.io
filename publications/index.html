@@ -54,7 +54,7 @@ quotations{
         </center>
     </div>
     <div id="right" style="font-size: 15pt; line-height: 100%; color: #808080">
-        <h7><nbr>{{ forloop.index }}</nbr>.
+        <h7><nbr>{{ forloop.rindex }}</nbr>.
         <quotations>❝</quotations>{{ work.title }}<quotations>❞</quotations></h7><br>
         {{ work.authors }}.<br>
         <i>{{ work.journal }}</i>. ({{ work.date }}) <a href="{{ work.url }}" target="_blank">DOI</a><br>
@@ -74,7 +74,7 @@ quotations{
         </center>
     </div>
     <div id="right" style="font-size: 15pt; line-height: 100%; color: #808080">
-        <h7><nbr>{{ forloop.index }}</nbr>.
+        <h7><nbr>{{ forloop.rindex }}</nbr>.
         <quotations>❝</quotations>{{ work.title }}<quotations>❞</quotations></h7><br>
         {{ work.authors }}.<br>
         <i>{{ work.journal }}</i>. ({{ work.date }}) <a href="{{ work.url }}" target="_blank">DOI</a><br>
