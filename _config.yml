@@ -89,7 +89,7 @@ url: http://SimonEnsemble.github.io
 baseurl: ""
  # repo: "https://github.com/CorySimon/alembic"
 email: "CoryMSimon@gmail.com"
-# disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
+disqus: "simonensemble" # Blog post comments, uncomment the option and set the site ID from your Disqus account
 # see gravitar.com `echo -n myemail@oregonstate.edu | md5sum` (lowercase)
 avatarurl: "https://www.gravatar.com/avatar/de74dcd32c1abfb40e07e895346f416d" # Uses avatars for favicons to get multple sites, eg Gravatar, Twitter, GitHub <- hashed email
 
@@ -129,3 +129,4 @@ sharing_links: # Appear at the bottom of single blog posts, uncomment and commen
   # Hacker News: "#ff6600"
   # Designer News: "#2D72D9"
   # Email: ""
+  #
