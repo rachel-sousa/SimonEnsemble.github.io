@@ -56,9 +56,9 @@ where $\beta:=1/(k_B T)$. In the remainder of this post, we will use the princip
 
 The appropriate thermodynamic ensemble to consider here is the isothermal-isoforce $nfT$-ensemble (analogous to the isothermal-isobaric ensemble): constant temperature $T$ and force $f$ are applied on the polymer composed of [constantly] $n$ monomers. The partition function $\Delta(n, f, T)$ of the polymer system is a sum over all microstates $\nu$:
 
-$$\Delta = \sum_{\nu} e^{\beta E_{nu} - \beta f x_{\nu}}$$
+$$\Delta = \sum_{\nu} e^{-\beta E_{\nu} - \beta f x_{\nu}}$$
 
-where $E_{\nu}$ is the energy and $x_{\nu}$ is the end-to-end distance in microstate $\nu$. Here, we're treating the monomer as ideal so that $E_{\nu}=0$ for every microstate; the only energy we are considering is the potential energy stored in a non-fully-extended polymer under force $f$. Thermodynamic $\beta = 1 / (k_B T)$.
+where $E_{\nu}$ is the energy and $x_{\nu}$ is the end-to-end distance in microstate $\nu$. Here, we're treating the monomer as ideal so that $E_{\nu}=0$ for every microstate; the only energy we are considering is the potential energy stored in a non-fully-extended polymer under force $f$. 
 
 # Characterizing the microstates
 
@@ -82,11 +82,11 @@ The angles $\theta_i \in [0, \pi]$ and $\phi_i \in [0, 2\pi]$. Thus, for the par
 
 $$\sum_{\nu} = \int_0^{2\pi} \cdots \int_0^{2\pi}  \int_0^{\pi} \cdots \int_0^{\pi} \sin \theta_1 \cdots \sin \theta_n d \theta_1 \cdots d \theta_n d \phi_1 \cdots d \phi_n.$$
 
-The $\sin\theta_i$ arise from the [surface element in spherical coordinates](https://en.wikipedia.org/wiki/Spherical_coordinate_system#Integration_and_differentiation_in_spherical_coordinates); without it, we would over-emphasize microstates towards the poles of the dashed axis.
+The $\sin\theta_i$ terms arise from the [surface element in spherical coordinates](https://en.wikipedia.org/wiki/Spherical_coordinate_system#Integration_and_differentiation_in_spherical_coordinates); without it, we would over-emphasize microstates towards the poles of the dashed axis.
 
 # Writing $x$ in terms of the microstate
 
-We now need to write the end-to-end distance $x$ in terms of the microstate $\\{(\theta_i, \phi_i \\}_{i=1,2,...,n}$. The drawing below shows that the extension of the polymer along the dashed axis due to monomer $i$ is given as $b \cos \theta_i$. Note that if $\theta_i> \pi / 2$, this quantity can be negative, indicating that the monomer is oriented such that the polymer is directed in the opposite direction of the force $f$.
+We now need to write the end-to-end distance $x$ in terms of the microstate $\\{(\theta_i, \phi_i) \\}_{i=1,2,...,n}$. The drawing below shows that the extension of the polymer along the dashed axis due to monomer $i$ is given as $b \cos \theta_i$. Note that if $\theta_i> \pi / 2$, this quantity can be negative, indicating that the monomer is oriented such that the polymer is directed in the opposite direction of the force $f$.
 
 {:.centerr}
 <figure>
@@ -94,9 +94,9 @@ We now need to write the end-to-end distance $x$ in terms of the microstate $\\{
     <figcaption>Fig. 6. Each monomer contributes $b \cos \theta_i$ to the end-to-end length of the polymer.</figcaption>
 </figure>
 
-The total polymer length is then the contribution due to each monomer:
+The total end-to-end distance is then the contribution due to each monomer:
 
-$$x(\theta_1, ..., \theta_n, \phi_1, ..., \phi_n) = \sum_i b \cos(\theta_i).$$
+$$x(\theta_1, ..., \theta_n, \phi_1, ..., \phi_n) = \displaystyle \sum_{i=1}^n b \cos(\theta_i).$$
 
 # Writing the partition function
 
@@ -117,13 +117,11 @@ where $p_{\nu}$ is the probability of observing microstate $\nu$ and $x_{\nu}$ i
 
 $$p_{\nu}=\frac{e^{-\beta f x_{\nu}}}{\Delta},$$
 
-since the partition function is the normalization factor in the probability distribution governing the microstates. Plugging $p_{\nu}$$ into the expected value of $x$ formula and recognizing this as a derivative of the partition function:
+since the partition function is the normalization factor in the probability distribution governing the microstates. Plugging $p_{\nu}$ into the formula for $\langle x \rangle$ and recognizing this as a derivative of the partition function:
 
-$$\langle x \rangle = \sum_{\nu} \frac{e^{-\beta f x_{\nu}}}{\Delta} x_{\nu}= \left(\frac{\partial \log \Delta}{\partial (\beta f)} \right)_{\beta,n}.$$
+$$\langle x \rangle = \sum_{\nu} \frac{e^{-\beta f x_{\nu}}}{\Delta} x_{\nu}= -\left(\frac{\partial \log \Delta}{\partial (\beta f)} \right)_{\beta,n}.$$
 
-Neat, so we can find the expected end-to-end length of the polymer by taking a derivative of the partition function.
-
-Upon taking the derivative, we get:
+Upon taking the derivative, we get the Langevin function of $\beta b f$:
 
 $$\frac{\langle x \rangle}{nb} = \coth(\beta f b) - \frac{1}{\beta b f}.$$
 
@@ -134,16 +132,16 @@ The figure below plots $$\langle x \rangle / (nb)$$ as a function of the non-dim
 {:.centerr}
 <figure>
     <img src="/images/FJC/langevin.png" alt="image" style="width: 70%;">
-    <figcaption>Fig. 7. A plot of the normalized expected end-to-end distance of a FJC polymer as a function of $\beta bf$. As the force $f$ increases, as the temperature $T$ decreases, and as the monomer length $b$ increases, the polymer becomes more fully extended. This is known as the Langevin function.</figcaption>
+    <figcaption>Fig. 7. A plot of the normalized expected end-to-end distance of a FJC polymer as a function of $\beta bf$. As the force $f$ increases, as the temperature $T$ decreases, and as the monomer length $b$ increases, the polymer becomes more fully extended.</figcaption>
 </figure>
 
 ## Small force approximation
 
 What happens when the force is small, such that $\beta b f << 1$? The average end-to-end distance $\langle x \rangle \sim 0$. The Taylor expansion of the hyperbolic cotangent about zero is:
 
-$$coth(\alpha) = \frac{1}{\alpha} + \frac{\alpha}{3} + \mathcal{O}(\alpha^3).$$
+$$\coth(\alpha) = \frac{1}{\alpha} + \frac{\alpha}{3} + \mathcal{O}(\alpha^3).$$
 
-Thus, around $x=0$, for small $f$:
+Thus, for small $f$:
 
 $$\langle x \rangle \sim \frac{\beta n b^2 f}{3}.$$
 
@@ -161,7 +159,7 @@ $$\langle x \rangle = nb \left(1 - \frac{1}{\beta bf}\right),$$
 
 leading to a divergent force as the polymer approaches maximal extension:
 
-$$f= \frac{1}{\beta b} \frac{1}{1-\frac{x}{nb}}.$$
+$$f= \frac{1}{\beta b} \frac{1}{1-\frac{\langle x\rangle}{nb}}.$$
 
 That is, as the polymer approaches full extension, it gets progressively more difficult to pull it further.
 
