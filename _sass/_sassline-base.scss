@@ -20,6 +20,7 @@ authorfont {
   font-style: bold;
 }
 
+/* https://stackoverflow.com/questions/46635023/mathjax-equations-are-colored-in-jekyll/46667522#46667522 */
 .MathJax .mi, .MathJax .mo {
     color: inherit;
 }

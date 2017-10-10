@@ -2,7 +2,7 @@
 feature_text: |
   # <span style="color:white">The Simon Research Ensemble</span>
   We use mathematics, machine learning, and computer simulations as a toolkit to understand and solve problems.
-feature_image: mcg.jpg
+feature_image: images/treez.jpg 
 excerpt: "this is an excerpt"
 ---
 
@@ -15,7 +15,7 @@ figcaption {
 }
 </style>
 
-The Simon Research Ensemble resides in the School of Chemical, Biological, and Environmental Engineering ([CBEE](http://cbee.oregonstate.edu/)) at [Oregon State University](http://oregonstate.edu/). We leverage mathematics, machine learning, statistical mechanics, and computer simulations to fundamentally understand physical phenomena ranging from porous materials with moving parts to mysterious, barren patches in arid grasslands. We aim to understand intimately and to explain clearly. The problems we approach have implications in clean energy, security, and human welfare.
+The Simon Research Ensemble resides in the School of Chemical, Biological, and Environmental Engineering ([CBEE](http://cbee.oregonstate.edu/)) at [Oregon State University](http://oregonstate.edu/). We leverage mathematics, machine learning, statistical mechanics, and computer simulations to shed light on physical phenomena ranging from porous materials with moving parts to mysterious, barren patches in arid grasslands. We aim to understand intimately and to explain clearly. The problems we approach have implications in clean energy, security, and human welfare.
 
 <figure>
 	<center>
