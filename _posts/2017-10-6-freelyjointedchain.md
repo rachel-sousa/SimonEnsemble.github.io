@@ -70,7 +70,7 @@ To perform the sum in the partition function, we first mathematically characteri
     <figcaption>Fig. 4. We can draw the exact configuration of the polymer if given the vectors $\vec{p}_i$ that trace each monomer.</figcaption>
 </figure>
 
-The angles that the vectors $\vec{p}_i$ take with respect to the axis determined by the force and tethering point, $\\{\theta_i\\}$, as well as the azimuthal angles $\{{\phi_i\}}$, are a more convenient description of the polymer's microstate.
+The angles that the vectors $\vec{p}_i$ take with respect to the axis determined by the force and tethering point, $\\{\theta_i\\}$, as well as the azimuthal angles $\\{\phi_i\\}$, are a more convenient description of the polymer's microstate.
 
 {:.centerr}
 <figure>
@@ -141,7 +141,7 @@ The figure below plots $$\langle x \rangle / (nb)$$ as a function of the non-dim
 
 What happens when the force is small, such that $\beta b f << 1$? The average end-to-end distance $\langle x \rangle \sim 0$. The Taylor expansion of the hyperbolic cotangent about zero is:
 
-$$coth(\alpha) = \frac{1}{\alpha} + \frac{\alpha}{3} + O(\alpha^3).$$
+$$coth(\alpha) = \frac{1}{\alpha} + \frac{\alpha}{3} + \mathcal{O}(\alpha^3).$$
 
 Thus, around $x=0$, for small $f$:
 
