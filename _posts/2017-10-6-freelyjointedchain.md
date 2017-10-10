@@ -44,10 +44,10 @@ From a purely mechanical perspective, one might incorrectly conclude that the fo
 
 At molecular scales, we must also consider thermal fluctuations of the polymer and thus entropy. Entropy effectively gives rise to a second force in the opposite direction of $f$:
 when the polymer is fully extended ($x=nb$), there is only a single microstate that it can possibly adopt.
-On the other hand, when the polymer is half-extended, there are many microstates that the polymer can adopt that are consistent with $x=nb/2$. Therefore, from the perspective of maximizing entropy, there is an entropic penalty when the polymer is fully extended. The average end-to-end distance $\langle x \rangle$ the polymer adopts is thus the classic story of competition between entropy and energy: the minimum potential energy configuration is full extension, while the maximal entropy state is $x=0$.
+On the other hand, when the polymer is half-extended, there are many microstates that the polymer can adopt that are consistent with $x=nb/2$. Therefore, from the perspective of maximizing entropy, there is an entropic penalty when the polymer is fully extended. The average end-to-end distance $\langle x \rangle$ the polymer adopts is thus the classic story of competition between entropy and energy: the minimum potential energy configuration is full extension, but $x=nb$ corresponds to the $x$ with the minimal allowable microstates, hence lowest entropy.
 
 The formula for the average end-to-end distance of a FJC polymer is:
-G
+
 $$\frac{\langle x \rangle}{nb}= \coth(\beta bf) - \frac{1}{\beta b f},$$
 
 where $\beta:=1/(k_B T)$. In the remainder of this post, we will use the principles of statistical mechanics to derive this formula.
@@ -129,7 +129,7 @@ $$\frac{\langle x \rangle}{nb} = \coth(\beta f b) - \frac{1}{\beta b f}.$$
 
 ## Visualization
 
-The figure below plots $$\langle x \rangle / (nb)$$ as a function of the non-dimensional quantity $\beta b f$. The result is intuitive. When the force is very large, the polymer becomes fully extended. When the temperature is very high, entropic effects dominate and the average end-to-end distance approaches zero.
+The figure below plots $$\langle x \rangle / (nb)$$ as a function of the non-dimensional quantity $\beta b f$. The result is intuitive. When the force is very large, the polymer becomes fully extended. When the temperature is very high, entropic effects dominate and the average end-to-end distance approaches zero. The result $\langle x \rangle \rightarrow 0$ as $\beta b f \rightarrow 0$ arises from symmetry: the polymer is biased to the right ($x>0$) less and less by the by the force in this limit.
 
 {:.centerr}
 <figure>
@@ -164,3 +164,16 @@ leading to a divergent force as the polymer approaches maximal extension:
 $$f= \frac{1}{\beta b} \frac{1}{1-\frac{x}{nb}}.$$
 
 That is, as the polymer approaches full extension, it gets progressively more difficult to pull it further.
+
+# Entropy as a function of $x$
+If we tether both ends of the polymer to fixed positions in space, how does the entropy vary with $x$? The entropy is given by the Boltzmann equation:
+
+$$S(x)=k_B \log [\Omega(x)],$$
+
+where $\Omega(x)$ is the number of microstates compatible with end-to-end length $x$. We can count such microstates using an integral with a delta function:
+
+$$\Omega(x)= \int_0^{2\pi} \cdots \int_0^{2\pi}  \int_0^{\pi} \cdots \int_0^{\pi} \sin \theta_1 \cdots \sin \theta_n \delta \left(\sum_i b cos\theta_i - x \right) d \theta_1 \cdots d \theta_n d \phi_1 \cdots d \phi_n.$$
+
+The delta function effectively sifts out the microstates that are compatible with an end-to-end distance $x$.
+
+I'm not sure how to evaluate this integral. If you know, please email me or submit a pull request!
