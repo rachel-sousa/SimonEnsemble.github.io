@@ -19,3 +19,7 @@ authorfont {
   font-family: Consolas,monaco,monospace;
   font-style: bold;
 }
+
+.MathJax .mi, .MathJax .mo {
+    color: inherit;
+}

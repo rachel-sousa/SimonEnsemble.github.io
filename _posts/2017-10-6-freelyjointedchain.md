@@ -8,13 +8,13 @@ author: Cory Simon
 ---
 Single-molecule force spectroscopy is a technique to gauge the binding forces within and mechanical properties of biopolymers. For example, consider a DNA unzipping experiment. At the end of a double-stranded DNA molecule, one strand is tethered to a fixed position, and the other, complementary strand is attached to a microsphere under an optical trap. Then, the two strands are pulled apart, and the force is measured as the hydrogen bonds between base pairs break and the DNA molecule unzips.
 
-An intuitive observation is that more force is required to unzip GC-rich regions compared to AT-rich regions. This is consistent with the number of hydrogen bonds that hold together the base pairs: two in the case of A-T and three in the case of C-G. [[ref](http://www.lps.ens.fr/~vincent/smb/PDF/heslotpre.pdf)] Dynamic DNA force spectroscopy can interrogate DNA-protein binding by measuring the force to disrupt the DNA-protein interaction as the DNA unzips [[ref](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.028103)]. 
+An intuitive observation is that a larger force is required to unzip GC-rich regions compared to AT-rich regions. This is consistent with the number of hydrogen bonds that hold together the base pairs: two in the case of A-T and three in the case of C-G. [[ref](http://www.lps.ens.fr/~vincent/smb/PDF/heslotpre.pdf)] Dynamic DNA force spectroscopy can interrogate DNA-protein binding by measuring the force to disrupt the DNA-protein interaction as the DNA unzips [[ref](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.028103)]. 
 
 Physical models of biopolymers such as DNA are useful for interpreting and gleaning insights from DNA unzipping experiments. This blog post is the first in a series to explore such models. We begin by investigating a simple system: modeling a force spectroscopy experiment conducted on a single strand of DNA.
 
 # The freely jointed chain (FJC) model
 
-The freely jointed chain (FJC) is a simplified structural model of a polymer such as single-stranded DNA. The FJC consists of $$n$$ rigid, linear monomers, each of which has length $$b$$. The $n$ monomers are joined together at their ends by freely rotating joints to form a chain. By allowing the joints to freely rotating, we neglect steric hindrance between any two given monomers (excluded volume) and allow all possible angles between two consecutive monomers to be visited.
+The freely jointed chain (FJC) is a simplified structural model of a polymer such as single-stranded DNA. The FJC consists of $$n$$ rigid, linear monomers of length $$b$$. The $n$ monomers are joined together at their ends by freely rotating joints to form a chain. By allowing the joints to freely rotate, we neglect steric hindrance between any two given monomers (excluded volume) and allow all possible rotations between two consecutive monomers to be visited in an unbiased manner.
 
 {:.centerr}
 <figure>
@@ -44,7 +44,7 @@ From a purely mechanical perspective, one might incorrectly conclude that the fo
 
 At molecular scales, we must also consider thermal fluctuations of the polymer and thus entropy. Entropy effectively gives rise to a second force in the opposite direction of $f$:
 when the polymer is fully extended ($x=nb$), there is only a single microstate that it can possibly adopt.
-On the other hand, when the polymer is half-extended, there are many microstates that the polymer can adopt that are consistent with $x=nb/2$. Therefore, from the perspective of maximizing entropy, there is an entropic penalty when the polymer is fully extended. The average end-to-end distance $\langle x \rangle$ the polymer adopts is thus the classic story of competition between entropy and energy: the minimum potential energy configuration is full extension, but $x=nb$ corresponds to the $x$ with the minimal allowable microstates, hence lowest entropy.
+On the other hand, when the polymer is half-extended, there are many microstates that the polymer can adopt that are consistent with $x=nb/2$. Therefore, from the perspective of maximizing entropy, full extension of the polymer imposes an entropic penalty. The average end-to-end distance $\langle x \rangle$ the polymer adopts is thus the classic story of competition between entropy and energy: the minimum potential energy configuration is full extension, but $x=nb$ corresponds to the $x$ with the minimal allowable microstates (one), hence lowest entropy.
 
 The formula for the average end-to-end distance of a FJC polymer is:
 
@@ -54,7 +54,7 @@ where $\beta:=1/(k_B T)$. In the remainder of this post, we will use the princip
 
 # The statistical mechanical ensemble
 
-The appropriate thermodynamic ensemble to consider here is the isothermal-isoforce $nfT$-ensemble (analogous to the isothermal-isobaric ensemble): constant temperature $T$ and force $f$ are applied on the polymer composed of [constantly] $n$ monomers. The partition function $\Delta(n, f, T)$ of the polymer system is a sum over all microstates $\nu$:
+The appropriate thermodynamic ensemble to consider here is the isothermal-isoforce $nfT$-ensemble (analogous to the isothermal-isobaric ensemble): the temperature $T$, force $f$, and number of monomers $m$ are fixed in this polymer system. The partition function $\Delta(n, f, T)$ of the polymer system is a sum over all microstates $\nu$:
 
 $$\Delta = \sum_{\nu} e^{-\beta E_{\nu} - \beta f x_{\nu}}$$
 
@@ -62,7 +62,7 @@ where $E_{\nu}$ is the energy and $x_{\nu}$ is the end-to-end distance in micros
 
 # Characterizing the microstates
 
-To perform the sum in the partition function, we first mathematically characterize a microstate of the polymer. For every monomer $i$, let $\vec{p}_i$ be the vector that traces it.
+To perform the sum in the partition function, we first mathematically characterize a microstate of the polymer. For every monomer $i$, let $\vec{p}_i$ be the vector that traces it in the direction starting from the tethered monomer.
 
 {:.centerr}
 <figure>
@@ -74,7 +74,7 @@ The angles that the vectors $\vec{p}_i$ take with respect to the axis determined
 
 {:.centerr}
 <figure>
-    <img src="/images/FJC/microstate_angles.png" alt="image" style="width: 100%;">
+    <img src="/images/FJC/microstate_angles.png" alt="image" style="width: 80%;">
     <figcaption>Fig. 5. The dashed line is the axis determined by the thethering point and the direction of the force. $\theta_i$ is the angle that the $i$th monomer takes with respect to this axis. $\phi_i$ is the azimuthal angle.</figcaption>
 </figure>
 
@@ -86,7 +86,7 @@ The $\sin\theta_i$ terms arise from the [surface element in spherical coordinate
 
 # Writing $x$ in terms of the microstate
 
-We now need to write the end-to-end distance $x$ in terms of the microstate $\\{(\theta_i, \phi_i) \\}_{i=1,2,...,n}$. The drawing below shows that the extension of the polymer along the dashed axis due to monomer $i$ is given as $b \cos \theta_i$. Note that if $\theta_i> \pi / 2$, this quantity can be negative, indicating that the monomer is oriented such that the polymer is directed in the opposite direction of the force $f$.
+We now write the end-to-end distance $x$ in terms of the microstate $\\{(\theta_i, \phi_i) \\}_{i=1,2,...,n}$. The drawing below shows that the extension of the polymer along the dashed axis due to monomer $i$ is given as $b \cos \theta_i$. Note that if $\theta_i> \pi / 2$, this quantity can be negative, indicating that the monomer is oriented such that the polymer is directed in the opposite direction of the force $f$.
 
 {:.centerr}
 <figure>
@@ -102,7 +102,7 @@ $$x(\theta_1, ..., \theta_n, \phi_1, ..., \phi_n) = \displaystyle \sum_{i=1}^n b
 
 Using our expression for $x$, we now write the partition function $\Delta(n, f, T)$ as a nice product:
 
-$$\Delta(n, f, T)= \displaystyle\prod_{i=1}^n \int_0^{2\pi} \int_0^{\pi} \sin \theta_i e^{\beta f b\cos(\theta_i)} d \theta_i d \phi_i.$$
+$$\Delta(n, f, T)= \displaystyle\prod_{i=1}^n \int_0^{2\pi} \int_0^{\pi} \sin (\theta_i) e^{\beta f b\cos(\theta_i)} d \theta_i d \phi_i.$$
 
 This gives:
 
@@ -127,7 +127,7 @@ $$\frac{\langle x \rangle}{nb} = \coth(\beta f b) - \frac{1}{\beta b f}.$$
 
 ## Visualization
 
-The figure below plots $$\langle x \rangle / (nb)$$ as a function of the non-dimensional quantity $\beta b f$. The result is intuitive. When the force is very large, the polymer becomes fully extended. When the temperature is very high, entropic effects dominate and the average end-to-end distance approaches zero. The result $\langle x \rangle \rightarrow 0$ as $\beta b f \rightarrow 0$ arises from symmetry: the polymer is biased to the right ($x>0$) less and less by the by the force in this limit.
+The figure below plots $$\langle x \rangle / (nb)$$ as a function of the non-dimensional quantity $\beta b f$. The result is intuitive. When the force is very large, the polymer becomes fully extended. When the temperature is very high, entropic effects dominate and the average end-to-end distance approaches zero. The result $\langle x \rangle \rightarrow 0$ as $\beta b f \rightarrow 0$ arises from symmetry: the polymer end is biased to the right ($x>0$) less and less by the force in this limit.
 
 {:.centerr}
 <figure>
@@ -137,7 +137,7 @@ The figure below plots $$\langle x \rangle / (nb)$$ as a function of the non-dim
 
 ## Small force approximation
 
-What happens when the force is small, such that $\beta b f << 1$? The average end-to-end distance $\langle x \rangle \sim 0$. The Taylor expansion of the hyperbolic cotangent about zero is:
+What happens when the force is small, such that $\beta b f << 1$? The Taylor expansion of the hyperbolic cotangent about zero is:
 
 $$\coth(\alpha) = \frac{1}{\alpha} + \frac{\alpha}{3} + \mathcal{O}(\alpha^3).$$
 
@@ -149,7 +149,8 @@ Solving for the force $f$, we get a form of Hooke's Law:
 
 $$f = \frac{3}{\beta n b^2} \langle x \rangle.$$
 
-The spring constant reveals that a high temperature effectively renders the polymer more difficult to pull due to larger entropic forces.
+This shows that the polymer behaves as an entropic spring.
+The spring constant reveals that a high temperature effectively renders the polymer more difficult to pull from $\langle x \rangle \sim 0$ due to larger entropic forces.
 
 ## Large force approximation
 
