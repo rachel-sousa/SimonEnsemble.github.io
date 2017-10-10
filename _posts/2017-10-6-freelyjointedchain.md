@@ -14,7 +14,7 @@ Physical models of biopolymers such as DNA are useful for interpreting and glean
 
 # The freely jointed chain (FJC) model
 
-The freely jointed chain (FJC) is a simplified structural model of a polymer such as single-stranded DNA. The FJC consists of $$n$$ rigid, linear monomers of length $$b$$. The $n$ monomers are joined together at their ends by freely rotating joints to form a chain. By allowing the joints to freely rotate, we neglect steric hindrance between any two given monomers (excluded volume) and allow all possible rotations between two consecutive monomers to be visited in an unbiased manner.
+The freely jointed chain (FJC) is a simplified structural model of a polymer such as single-stranded DNA. The FJC consists of $$n$$ rigid, linear monomers of length $$b$$, known as Kuhn segments. The $n$ monomers are joined together at their ends by freely rotating joints to form a chain. By allowing the joints to freely rotate, we neglect steric hindrance between any two given monomers (excluded volume) and allow all possible rotations between two consecutive monomers to be visited in an unbiased manner.
 
 {:.centerr}
 <figure>
