@@ -184,3 +184,13 @@ $$\Omega(x)= \int_0^{2\pi} \cdots \int_0^{2\pi}  \int_0^{\pi} \cdots \int_0^{\pi
 The delta function effectively sifts out the microstates that are compatible with an end-to-end distance $x$.
 
 I'm not sure how to evaluate this integral. If you know, please email me or submit a pull request!
+
+A better aproach might be to employ Gibb's formula for entropy:
+
+$$S = - k_B \sum_{\nu} p_{\nu} \log(p_{\nu}),$$
+
+with:
+
+$$p_{\nu} = \frac{e^{\beta f x_{\nu}}}{\Delta}.$$
+
+Here, $$\nu = (\theta_1, ..., \theta_n, \phi_1, ..., \phi_n)$$ as described above and the summation is actually an integral.
