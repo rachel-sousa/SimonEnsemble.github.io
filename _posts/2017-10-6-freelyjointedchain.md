@@ -56,9 +56,15 @@ where $\beta:=1/(k_B T)$. In the remainder of this post, we will use the princip
 
 The appropriate thermodynamic ensemble to consider here is the isothermal-isoforce $nfT$-ensemble (analogous to the isothermal-isobaric ensemble): the temperature $T$, force $f$, and number of monomers $m$ are fixed in this polymer system. The partition function $\Delta(n, f, T)$ of the polymer system is a sum over all microstates $\nu$:
 
-$$\Delta = \sum_{\nu} e^{-\beta E_{\nu} - \beta f x_{\nu}}$$
+$$\Delta = \sum_{\nu} e^{-\beta E_{\nu} + \beta f x_{\nu}}$$
 
-where $E_{\nu}$ is the energy and $x_{\nu}$ is the end-to-end distance in microstate $\nu$. Here, we're treating the monomer as ideal so that $E_{\nu}=0$ for every microstate; the only energy we are considering is the potential energy stored in a non-fully-extended polymer under force $f$. 
+where $E_{\nu}$ is the energy and $x_{\nu}$ is the end-to-end distance in microstate $\nu$. There are two ways to view this partition function. In the first way, we're treating the polymer as ideal so that the potential energy $E_{\nu}=0$ for every microstate, and the $fx_{\nu}$ term plays the role of $PV_{\nu}$ in the isothermal-isobaric ensemble except with the opposite sign since, if $fdx$ is positive, work has been done $on$ the system. The other way to view the partition funciton $$\Delta$$ is as if the only energy associated with a microstate $\nu$ is the potential energy of the chain under the pulling force, which is $-fx_{\nu}$ as described above. i.e., $$\Delta =\sum_{\nu} e^{-\beta E_{\nu}} = \sum_{\nu} e^{\beta f x_{\nu}}$$ is an equally valid way to view the partition function.
+
+Note that under the isothermal-isoforce ensemble, the probability of a microstate $\nu$, $p_{\nu}$, is proportional to the factor:
+
+$$p_{\nu} \sim e^{\beta f x_{\nu}},$$
+
+rendering microstates with longer end-to-end distances $x_{\nu}$ as expontially more likely. However, as we will see, there are many more microstates associated with *shorter* chain lengths, so this is a classical competition between minimizing potential energy and maximizing entropy.
 
 # Characterizing the microstates
 
@@ -82,7 +88,9 @@ The angles $\theta_i \in [0, \pi]$ and $\phi_i \in [0, 2\pi]$. Thus, for the par
 
 $$\sum_{\nu} = \int_0^{2\pi} \cdots \int_0^{2\pi}  \int_0^{\pi} \cdots \int_0^{\pi} \sin \theta_1 \cdots \sin \theta_n d \theta_1 \cdots d \theta_n d \phi_1 \cdots d \phi_n.$$
 
-The $\sin\theta_i$ terms arise from the [surface element in spherical coordinates](https://en.wikipedia.org/wiki/Spherical_coordinate_system#Integration_and_differentiation_in_spherical_coordinates); without it, we would over-emphasize microstates towards the poles of the dashed axis.
+The $\sin\theta_i$ terms arise from the [surface element in spherical coordinates](https://en.wikipedia.org/wiki/Spherical_coordinate_system#Integration_and_differentiation_in_spherical_coordinates); without it, we would over-emphasize microstates towards the poles of the dashed axis. 
+
+We assumed here that the pulling force $$f$$ is always in the direction of $$\sum \vec{p}_i - \vec{p}_1$$. [I *think* that owing to radially symmetry, the result will be the same if $f$ is only in the direction to the right of the page. On the other hand, the surface area of a sphere that $$\sum \vec{p}_i$$ can explore does get larger with increasing $$x_{\nu}$$...]
 
 # Writing $x$ in terms of the microstate
 
