@@ -173,7 +173,11 @@ $$f= \frac{1}{\beta b} \frac{1}{1-\frac{\langle x\rangle}{nb}}.$$
 That is, as the polymer approaches full extension, it gets progressively more difficult to pull it further.
 
 # Entropy as a function of $x$
-If we tether both ends of the polymer to fixed positions in space, how does the entropy vary with $x$? The entropy is given by the Boltzmann equation:
+If we tether both ends of the polymer to fixed positions in space, how does the entropy vary with $x$? 
+
+
+### Method 1
+The entropy is given by the Boltzmann equation:
 
 $$S(x)=k_B \log [\Omega(x)],$$
 
@@ -185,7 +189,9 @@ The delta function effectively sifts out the microstates that are compatible wit
 
 I'm not sure how to evaluate this integral. If you know, please email me or submit a pull request!
 
-A better aproach might be to employ Gibb's formula for entropy:
+
+### Method 2
+Another approach is to apply the Gibbs formula for entropy:
 
 $$S = - k_B \sum_{\nu} p_{\nu} \log(p_{\nu}),$$
 
@@ -194,3 +200,16 @@ with:
 $$p_{\nu} = \frac{e^{\beta f x_{\nu}}}{\Delta}.$$
 
 Here, $$\nu = (\theta_1, ..., \theta_n, \phi_1, ..., \phi_n)$$ as described above and the summation is actually an integral.
+
+### Method 3
+Using Gibbs formula for entropy, we can show that the Gibbs free energy $$G$$ is:
+
+$$G = -k_B T \log \Delta.$$
+
+From the first law of thermodynamics for reversible processes, $$dG = -SdT - x df + \mu dn$$, implying:
+
+$$-S = \left( \frac{\partial G}{\partial T} \right)_{f, n}.$$
+
+Thus, in terms of the partition function $$\Delta$$:
+
+$$S = \frac{\partial}{\partial T} \left(k_B T \log \Delta\right)_{f, n}.$$
