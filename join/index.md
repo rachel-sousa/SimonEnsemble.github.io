@@ -12,8 +12,11 @@ figcaption {
 </style>
 
 # Join our mission
+Students with a keen interest in statistical mechanics, computer simulations, machine learning, and/or applied mathematics:
 
-We are looking for graduate and undergraduate students interested in computational modeling and applied mathematics. Current research topics, while evolving, are described [here]({{ site.url }}). If you are a student with interest in joining the Simon Ensemble, I encourage you to contact me at Cory.Simon [at] oregonstate.edu to discuss potential research projects. Please include your CV and a short statement of your interests and career goals.
+If you are an undergraduate or graduate student currently enrolled in or admitted to Oregon State University, I encourage you to contact me at Cory.Simon [at] oregonstate.edu to discuss available positions and potential research projects. Please include your CV and a short statement of your interests and career goals.
+
+If you are interested in pursuing a graduate degree at Oregon State University and joining the Simon Ensemble, please apply [here](http://cbee.oregonstate.edu/che-graduate-program) and mention your interest in working with me in your application.
 
 # My Advising Style
 
