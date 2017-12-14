@@ -15,7 +15,7 @@ figcaption {
 }
 </style>
 
-The Simon Research Ensemble resides in the School of Chemical, Biological, and Environmental Engineering ([CBEE](http://cbee.oregonstate.edu/)) at [Oregon State University](http://oregonstate.edu/). We leverage mathematics, machine learning, statistical mechanics, and computer simulations to shed light on physical phenomena ranging from porous materials with moving parts to mysterious, barren patches in arid grasslands. We aim to understand intimately and to explain clearly. The problems we approach have implications in clean energy, security, and human welfare.
+The Simon Research Ensemble resides in the School of Chemical, Biological, and Environmental Engineering ([CBEE](http://cbee.oregonstate.edu/)) at [Oregon State University](http://oregonstate.edu/). We leverage mathematics, machine learning, statistical mechanics, and computer simulations to shed light on physical phenomena ranging from porous materials with moving parts, to the transcriptional regulation of gene expression, to mysterious, barren patches in arid grasslands. We aim to understand intimately and to explain clearly. The problems we approach have implications in clean energy, security, health, and human welfare.
 
 <figure>
 	<center>
@@ -27,7 +27,7 @@ The Simon Research Ensemble resides in the School of Chemical, Biological, and E
 
 ### Nano-porous materials
 
-Metal-organic frameworks (MOFs) are crystalline materials that possess nano-sized pores, endowing them with enormous internal surface areas. As a consequence of their ability to selectively adsorb molecules into their pores, MOFs hold promise for many practical applications. For example, MOFs can densify hydrogen gas for onboard vehicular fuel storage, capture radioactive gases emitted during the reprocessing of used nuclear fuel, deliver therapeutic drugs, and detect vapor analytes as chemical sensors.
+Metal-organic frameworks (MOFs) are crystalline materials that possess nano-sized pores. The enormous internal surface areas and permanent porosity of MOFs afford them adsorption-based applications in storing, separating, and sensing gases. For example, MOFs can densify hydrogen gas for onboard vehicular fuel storage, selectively capture radioactive gases emitted during the reprocessing of used nuclear fuel, and detect toxic vapors or explosives as sensors.
 
 An exciting aspect of MOFs is their modular and versatile chemistry. In the synthesis of MOFs, metal nodes/clusters and organic linker molecules self-assemble in solution to construct a porous framework. 
 
@@ -38,7 +38,7 @@ An exciting aspect of MOFs is their modular and versatile chemistry. In the synt
 	</center>
 </figure>
 
-By changing the chemistry of the metal nodes and linker molecules, *many* different MOFs can be synthesized.
+By changing the chemistry of the metal nodes and linker molecules, *many* different MOFs can be synthesized. Tens of thousands of different MOFs have been synthesized to date.
 
 <figure>
 	<center>
@@ -47,7 +47,11 @@ By changing the chemistry of the metal nodes and linker molecules, *many* differ
 	</center>
 </figure>
 
-This high chemical tunability allows us to engineer MOFs with diverse properties and fine-tune existing MOF architectures to target specific guest molecules for gas storage and separations, drug delivery, catalysis, and chemical sensing. 
+This high chemical tunability allows chemists to fine-tune MOF architectures to target specific molecules for applications in gas storage and separations, catalysis, and chemical sensing. More broadly, this versatile and modular chemistry enables the synthesis of MOFs with diverse properties and functionalities.
+
+An arm of our research is to employ molecular models and simulations to (i) sift through the many variations of MOFs and predict the top performing materials for a given application, (ii) predict novel properties that may emerge in flexible MOF paradigms, (iii) bring clarity to experimental observations, and (iv) identify means to exploit/harness unique adsorption properties in MOFs for engineering applications.
+
+#### Dynamic/flexible MOFs
 
 Many MOFs are flexible and have moving parts that respond to external stimuli, which often give rise to unique and valuable properties. 
 
@@ -58,9 +62,34 @@ Many MOFs are flexible and have moving parts that respond to external stimuli, w
 	</center>
 </figure>
 
-We pose structural models that capture the essence of the flexible/dynamic degrees of freedom of a given MOF. Then, we use molecular models and statistical mechanics to study how the flexible/dynamic parts respond to external stimuli, such as heat, stress, and the adsorption of gas molecules. We make the minimal assumptions necessary to capture the experimentally observed features. Our goals are to fundamentally understand how flexible/dynamic parts in MOFs respond to different stimuli and give rise to unique properties, such as negative thermal expansion. Such insights are valuable for optimizing the chemistry of flexible/dynamic MOFs for gas storage, gas separations, drug delivery, and chemical sensing. Ideally, our models will uncover new, unexpected ways to exploit dynamic/flexible MOFs for engineering applications.
+We are developing parsimonious but illuminating statistical mechanical models of dynamic/flexible MOFs to fundamentally understand how flexible/dynamic parts in MOFs respond to different stimuli and give rise to unique properties, such as negative thermal expansion. Such insights are valuable for optimizing the chemistry of flexible/dynamic MOFs for gas storage, gas separations, drug delivery, and chemical sensing. Ideally, our models will uncover new, unexpected ways to exploit dynamic/flexible MOFs for engineering applications.
 
-Another focus of our group is to leverage recent advances in deep learning and train neural networks to recognize optimal MOFs. Neural networks are attractive because they automatically discover features important for determining performance, negating the need for hand-engineered features.
+We are also developing new algorithms to overcome challenges presented in the simulation of gas adsorption in flexible MOFs.
+
+#### Bringing machine learning into materials science
+
+Highly accurate molecular simulations/calculations often incur prohibitive computational costs, precluding *in-silico* high-throughput screening of MOFs with these high-level methods. A focus of our group is to leverage recent advances in deep learning and train neural networks to recognize optimal MOFs. Neural networks are attractive because they automatically discover features important for determining performance, negating the need for hand-engineered features. Bringing artificial intelligence algorithms into materials science can expedite high-throughput computational screenings by focusing expensive but more accurate computations on only the most promising candidates.
+
+#### Software development
+
+The routine simulation of gas adsorption in porous materials is cumbersome in available software packages and inaccessible to those with minimal programming skills. Our group is developing software to democratize the analysis of porous materials with user-friendly, free, open-source software written in Julia. [Julia](https://julialang.org/) is a relatively new, high-level programming language designed especially for numerical computing. Julia's just-in-time compiler and expressive syntax allows us to write code with speed approaching that of the C language but with much less effort and complexity. Futhermore, writing parallel code in Julia is seamless. To illustrate, our software package `PorousMaterials` could compute the adsorption isotherm of methane in metal-organic framework HKUST-1 as follows:
+
+{% highlight julia %}
+using PorousMaterials
+
+framework = read_crystal_structure("HKUST-1.cif")
+adsorbate = read_molecule("CH4.mol")
+molecular_model = read_forcefield("UFF.csv")
+
+temperature = 298.0 # K
+pressures = linspace(0.01, 100.0, 10) # array of 10 equally-spaced pressures, in bar.
+
+n_ads = adsorption_isotherm(framework, adsorbate, temperature, pressures, molecular_model) # runs simulation, returns amount adsorbed at each pressure
+
+plot(pressures, n_ads) # plots adsorption isotherm
+{% endhighlight %}
+
+An advantage of having our own, well-designed code that we know intimately is that we can easily modify it to enable new and custom types of molecular simulations for our research. We hope that other groups will join in the development of `PorousMaterials` when we make the first version open source.
 
 ### Self-organizing vegetation in arid landscapes
 
@@ -75,7 +104,7 @@ In the thirsty grasslands of Namibia, the landscape is covered by thousands of s
 
 Tune into the BBC documentary, *Africa* (S1: E1, at 3:00) [on Netflix] to listen to David Attenborough introduce fairy circles in his captivating narration. 
 
-Fairy circles may at first appear to have little relevance in a research program in chemical engineering. To the contrary, the etiology of these striking patterns can be explained by principles of fluid flow, the theory of phase transitions, and multiple-scale analysis. Our group seeks to build a mathematical model to capture the formation and persistence of these fairy circles and understand the influence of climate on the pattern. This can help us understand and monitor how ecological systems cope with climate stress such as drought, and perhaps reveal new farming strategies in arid climates.
+Fairy circles may at first appear to have little relevance in a research program in chemical engineering. To the contrary, the etiology of these striking patterns can be explained by the principles of fluid flow, the theory of phase transitions, and multiple-scale analysis. Our group is developing a mathematical model to capture the formation and persistence of these fairy circles and understand the influence of climate on the pattern. Our efforts are towards understanding and monitoring how ecological systems cope with climate stress such as drought and, perhaps, revealing new strategies to intensify agricultural crop production in arid climates.
 
 ## The value of mathematical modeling
 
