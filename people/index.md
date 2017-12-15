@@ -42,6 +42,7 @@ Gleeson Hall 211<br><br>
 | <s>Ph.D.</s> Mathematics      | University of British Columbia           | 2010-2012 |
 | B.S. Chemical Engineering     | The University of Akron                  | 2005-2010 |
 
+<br>
 #### Professional Experience
 
 | ------------------------------------------- | ----------------- | --- |
