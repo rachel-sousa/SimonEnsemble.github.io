@@ -15,3 +15,5 @@ figcaption {
 # Teaching philosophy
 
 I describe my teaching philosophy in [this essay](teaching_philosophy.pdf).
+
+I teach CHE 361, Process Dynamics and Simulation, Winter 2018.
