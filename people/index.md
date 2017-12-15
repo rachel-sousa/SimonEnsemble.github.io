@@ -34,7 +34,7 @@ Gleeson Hall 211<br><br>
 <a href="{{ site.url }}/CorySimonCV.pdf">Full Curriculum Vitae</a>.<br>
 <div style="clear: both;"></div>
 
-#### Education
+**Education**
 
 | ----------------------------- | ---------------------------------------- | --------- |
 | Fellow, Computational Biology | Altius Institute for Biomedical Sciences | 2017      |
@@ -43,7 +43,7 @@ Gleeson Hall 211<br><br>
 | B.S. Chemical Engineering     | The University of Akron                  | 2005-2010 |
 
 <br>
-#### Professional Experience
+**Professional Experience**
 
 | ------------------------------------------- | ----------------- | --- |
 | École polytechnique fédérale de Lausanne    | Visiting Scholar | 2016 |
