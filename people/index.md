@@ -26,7 +26,7 @@ titlez {
 
 # Assistant Professor
 
-![Some Title](photos/cory.jpg){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
+![Cory](photos/cory.jpg){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
 <span style="color:orange; font-weight: bold; font-size: 150%;">Cory Simon</span><br>
 Cory.Simon [at] oregonstate.edu<br>
 Gleeson Hall 211<br><br>
@@ -65,21 +65,21 @@ B.S. (2016) University of Iceland, Iceland<br>
 
 # Undergraduate students
 
-![Some Title](photos/MiraKhare.jpg){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
+![Mira](photos/MiraKhare.jpg){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
 <span style="color:orange; font-weight: bold; font-size: 150%;">Mira Khare</span><br>
 *Major:* Chemical Engineering<br>
 *Research interests:* using machine learning to extract biological insights from large genomic data sets
 <div style="clear: both;"></div>
 
 ---
-
+![Rachel](photos/RachelSousa.jpg){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
 <span style="color:orange; font-weight: bold; font-size: 150%;">Rachel Sousa</span><br>
 *Major:* Mathematics<br>
 *Research interests:* mathematical modeling of self-organizing vegetation in arid landscapes
 <div style="clear: both;"></div>
 
 --- 
-![Some Title](photos/ArthurHenryYork.JPG){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
+![Arthur](photos/ArthurHenryYork.JPG){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
 <span style="color:orange; font-weight: bold; font-size: 150%;">Arthur Henry York</span><br>
 *Major:* Computer Science<br>
 *Research interests:* molecular simulations in flexible, nanoporous materials; software development
