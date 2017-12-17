@@ -61,8 +61,10 @@ Cory digs hiking/backpacking in scenic places (photos on <a href="https://ello.c
 
 ![Arni](photos/Arni.JPG){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
 <span style="color:orange; font-weight: bold; font-size: 150%;">Arni Sturluson</span><br>
-B.S. (2016) University of Iceland, Iceland<br>
+B.Sc. Chemistry. University of Iceland. (2012-2015)<br>
 *Research interests:* using machine learning algorithms from computer vision to analyze nanoporous materials
+<br><br>
+I really like music, and my most played artist in 2017 was MF DOOM. I'm an avid football fan, and my team, Manchester City, is currently in the lead in the Premier League.
 <div style="clear: both;"></div>
 
 # Undergraduate students
@@ -86,5 +88,5 @@ B.S. (2016) University of Iceland, Iceland<br>
 *Major:* Computer Science<br>
 *Research interests:* molecular simulations in flexible, nanoporous materials; software development
 <br><br>
-Arthur's favorite TV show is Battlestar Galactica, and his favorite board game is Hansa Teutonica.
+My favorite TV show is Battlestar Galactica, and my favorite board game is Hansa Teutonica.
 <div style="clear: both;"></div>
