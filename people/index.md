@@ -59,9 +59,11 @@ Cory digs hiking/backpacking in scenic places (photos on <a href="https://ello.c
 
 # Ph.D. students
 
+![Arni](photos/Arni.JPG){:style="float: left;margin-right: 7px;margin-top: 7px; width: 30%;"}
 <span style="color:orange; font-weight: bold; font-size: 150%;">Arni Sturluson</span><br>
 B.S. (2016) University of Iceland, Iceland<br>
 *Research interests:* using machine learning algorithms from computer vision to analyze nanoporous materials
+<div style="clear: both;"></div>
 
 # Undergraduate students
 
